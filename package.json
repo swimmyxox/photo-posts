@@ -4,7 +4,6 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
-    "chokidar-cli": "^2.1.0",
     "node-sass": "^4.14.1"
   },
   "scripts": {
