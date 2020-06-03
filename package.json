@@ -9,5 +9,8 @@
   "scripts": {
     "build": "node-sass --output public --include-path scss scss/main.scss",
     "build:watch": "yarn build --watch"
+  },
+  "dependencies": {
+    "tingle.js": "^0.15.3"
   }
 }
