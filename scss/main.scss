@@ -1,5 +1,161 @@
-$my-color: #fff;
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
 
 body {
-  color: $my-color;
+  font-size: 62.5%;
+  color: #000;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+
+dl,
+dt,
+dd,
+ol,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+  list-style: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: solid 12px #bfc5ca;
+  box-sizing: border-box;
+  background-color: transparent;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.home {
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 140px;
+  height: 140px;
+  font-style: italic;
+  mix-blend-mode: color-dodge;
+  z-index: 100;
+
+  > h1 {
+    color: #47494b;
+    font-weight: 300;
+    letter-spacing: 0.3rem;
+    -webkit-margin-before: 0;
+    margin-block-start: 0;
+  }
+
+  > ul {
+    > li {
+      padding: 0.3rem 0;
+      font-size: 1.3em;
+      letter-spacing: 0.2rem;
+      color: #a0a5a9;
+    }
+  }
+}
+
+.contents {
+  width: 80%;
+  height: calc(100% - 50px);
+  margin: 0 10%;
+  padding: 50px 0 0;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 8px;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    height: calc(100% - 190px);
+    padding: 190px 0 0;
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  @media screen and (max-width: 767px) {
+    height: calc(100% - 190px);
+    padding: 190px 0 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: repeat(3, 1fr);
+  }
+
+  &-item {
+    grid-column: auto / span 3;
+    grid-row: auto / span 3;
+
+    &.rows2 {
+      grid-column: auto / span 3;
+      grid-row: auto / span 5;
+    }
+
+    > img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+      object-fit: cover;
+
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+  }
+}
+
+.scroll_top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: #bfc5ca;
+  mix-blend-mode: overlay;
+  cursor: pointer;
+  z-index: 100;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 19px;
+    top: 21px;
+    width: 10px;
+    height: 10px;
+    border-top: solid 2px #47494b;
+    border-right: solid 2px #47494b;
+    transform: rotate(-45deg);
+  }
 }
