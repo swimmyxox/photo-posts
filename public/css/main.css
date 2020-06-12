@@ -157,6 +157,11 @@ p {
       height: 100%; }
       .contents-item2 > img:hover {
         opacity: 0.4; }
+    .contents-item2 > .title,
+    .contents-item2 .text,
+    .contents-item2 .like,
+    .contents-item2 time {
+      display: none; }
   .contents-item3 {
     grid-column: 8 / 13;
     grid-row: 1 / 16; }
@@ -175,6 +180,11 @@ p {
       height: 100%; }
       .contents-item3 > img:hover {
         opacity: 0.4; }
+    .contents-item3 > .title,
+    .contents-item3 .text,
+    .contents-item3 .like,
+    .contents-item3 time {
+      display: none; }
   .contents-item4 {
     grid-column: 1 / 4;
     grid-row: 8 / 16; }
@@ -193,6 +203,11 @@ p {
       height: 100%; }
       .contents-item4 > img:hover {
         opacity: 0.4; }
+    .contents-item4 > .title,
+    .contents-item4 .text,
+    .contents-item4 .like,
+    .contents-item4 time {
+      display: none; }
   .contents-item5 {
     grid-column: 4 / 8;
     grid-row: 8 / 16; }
@@ -211,6 +226,11 @@ p {
       height: 100%; }
       .contents-item5 > img:hover {
         opacity: 0.4; }
+    .contents-item5 > .title,
+    .contents-item5 .text,
+    .contents-item5 .like,
+    .contents-item5 time {
+      display: none; }
   .contents-item6 {
     grid-column: 1 / 7;
     grid-row: 16 / 24; }
@@ -229,6 +249,11 @@ p {
       height: 100%; }
       .contents-item6 > img:hover {
         opacity: 0.4; }
+    .contents-item6 > .title,
+    .contents-item6 .text,
+    .contents-item6 .like,
+    .contents-item6 time {
+      display: none; }
   .contents-item7 {
     grid-column: 7 / 10;
     grid-row: 16 / 24; }
@@ -247,6 +272,11 @@ p {
       height: 100%; }
       .contents-item7 > img:hover {
         opacity: 0.4; }
+    .contents-item7 > .title,
+    .contents-item7 .text,
+    .contents-item7 .like,
+    .contents-item7 time {
+      display: none; }
   .contents-item8 {
     grid-column: 10 / 13;
     grid-row: 16 / 24; }
@@ -265,6 +295,11 @@ p {
       height: 100%; }
       .contents-item8 > img:hover {
         opacity: 0.4; }
+    .contents-item8 > .title,
+    .contents-item8 .text,
+    .contents-item8 .like,
+    .contents-item8 time {
+      display: none; }
 
 .scroll_top {
   position: fixed;

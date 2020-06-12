@@ -52,26 +52,57 @@ window.addEventListener("DOMContentLoaded", () => {
       return false; // nothing happens
     },
   });
-  //const items = document.querySelectorAll(
-  //  ".contents-item, .contents-item2, .contents-item3, .contents-item4, .contents-item5, .contents-item6, .contents-item7, .contents-item8"
-  //);
-  const images = document.querySelectorAll(".image");
-  Array.from(images).forEach((item) => {
+
+  // modal window contents setting
+  const items = document.querySelectorAll(
+    ".contents-item, .contents-item2, .contents-item3, .contents-item4, .contents-item5, .contents-item6, .contents-item7, .contents-item8"
+  );
+
+  Array.from(items).forEach((item) => {
     item.addEventListener("click", () => {
+      const image = item.querySelector("img");
+      const title = item.querySelector(".title");
+      const text = item.querySelector(".text");
+      const like = item.querySelector(".like");
+      const date = item.querySelector("time");
       modal.setContent(
-        `<div class="tingle-modal-box__image">${item.outerHTML}</div>
+        `<div class="tingle-modal-box__image">${image.outerHTML}</div>
         <div class="tingle-modal-box__section">
-        <h2>Jerry fish</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        commodo consequat. </p>
-        <div class="tingle-modal-box__section_footer">
-        <div class="left"><div class="heart-icon">♡</div><p class="likes">1,000</p></div>
-        <div class="right"><p class="date">Friday, 2 Sep 2016</p></div>
+          <h2>${title.innerHTML}</h2>
+          <p>${text.innerHTML}</p>
+          <div class="tingle-modal-box__section_footer">
+            <div class="left">
+              <div class="heart-icon">
+                <label id="favorite" for="heart_checkbox">
+                <input type="checkbox" id="heart_checkbox">
+                <i class="material-icons md-24">favorite</i>
+                </label>
+              </div>
+              <p class="likes">${like.innerHTML}</p>
+            </div>
+            <div class="right">
+              <p class="date">${date.innerHTML}</p>
+            </div>
+          </div>
         </div>`
       );
       modal.open();
+
+      document.querySelector(".heart-icon").onclick = function () {
+        debugger;
+        let favorite = document.querySelector(".likes").innerHTML;
+        console.log("a", document.getElementById("heart_checkbox").checked);
+        debugger;
+        if (document.getElementById("heart_checkbox").checked == false) {
+          favorite = ++favorite;
+          document.querySelector(".likes").innerHTML = favorite;
+          document.querySelector(".heart-icon").style.color = "#e2154d";
+        } else {
+          favorite--;
+          document.querySelector(".likes").innerHTML = favorite;
+          document.querySelector(".heart-icon").style.color = "#fff";
+        }
+      };
     });
   });
 });

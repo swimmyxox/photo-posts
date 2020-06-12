@@ -88,12 +88,11 @@
 }
 .tingle-modal-box__content {
   display: flex;
-  justify-content: center;
 }
 .tingle-modal-box__image {
   width: 50%;
+  max-width: 600px;
   height: 100%;
-  padding: 0 auto;
 }
 .tingle-modal-box__image > img {
   width: 100%;
@@ -103,12 +102,13 @@
 }
 .tingle-modal-box__section {
   width: 50%;
+  max-width: 600px;
   height: auto;
   color: #fff;
   font-size: 0.8rem;
   letter-spacing: 0.2rem;
   padding: 10px;
-  margin: auto 0;
+  margin: auto;
 }
 .tingle-modal-box__section > h2 {
   font-size: 1.05rem;
@@ -131,10 +131,22 @@
   width: 25px;
   height: 25px;
   color: #fff;
-  font-size: 1.3rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
 }
 .heart-icon:hover {
   color: #e2154d;
+}
+#heart_checkbox {
+  display: none;
+}
+.material-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
 }
 .likes {
   line-height: 25px;
