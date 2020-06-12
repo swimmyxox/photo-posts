@@ -31,6 +31,24 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+const handleFavorite = (event) => {
+  event.preventDefault();
+  let favorite = document.querySelector(".likes").innerHTML;
+  const heartCheckbox = document.getElementById("heart_checkbox");
+
+  if (heartCheckbox.checked) {
+    favorite--;
+    heartCheckbox.checked = false;
+    document.querySelector(".likes").innerHTML = favorite;
+    document.querySelector(".heart-icon").style.color = "#fff";
+  } else {
+    favorite++;
+    heartCheckbox.checked = true;
+    document.querySelector(".likes").innerHTML = favorite;
+    document.querySelector(".heart-icon").style.color = "#e2154d";
+  }
+};
+
 // tingle.js
 window.addEventListener("DOMContentLoaded", () => {
   var modal = new tingle.modal({
@@ -40,10 +58,14 @@ window.addEventListener("DOMContentLoaded", () => {
     closeLabel: "Close",
     cssClass: ["custom-class-1", "custom-class-2"],
     onOpen: function () {
-      console.log("modal open");
+      document
+        .querySelector(".heart-icon")
+        .addEventListener("click", handleFavorite);
     },
     onClose: function () {
-      console.log("modal closed");
+      document
+        .querySelector(".heart-icon")
+        .removeEventListener("click", handleFavorite);
     },
     beforeClose: function () {
       // here's goes some logic
@@ -87,22 +109,6 @@ window.addEventListener("DOMContentLoaded", () => {
         </div>`
       );
       modal.open();
-
-      document.querySelector(".heart-icon").onclick = function () {
-        debugger;
-        let favorite = document.querySelector(".likes").innerHTML;
-        console.log("a", document.getElementById("heart_checkbox").checked);
-        debugger;
-        if (document.getElementById("heart_checkbox").checked == false) {
-          favorite = ++favorite;
-          document.querySelector(".likes").innerHTML = favorite;
-          document.querySelector(".heart-icon").style.color = "#e2154d";
-        } else {
-          favorite--;
-          document.querySelector(".likes").innerHTML = favorite;
-          document.querySelector(".heart-icon").style.color = "#fff";
-        }
-      };
     });
   });
 });
