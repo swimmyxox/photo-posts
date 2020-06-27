@@ -32,7 +32,7 @@ $button-color: #6c6f72;
 }
 
 @mixin hiddenItem {
-  > .title,
+  .title,
   .text,
   time {
     display: none;
@@ -116,7 +116,7 @@ header {
   mix-blend-mode: color-dodge;
   z-index: 100;
 
-  > h1 {
+  h1 {
     color: $title-color;
     font-weight: 300;
     letter-spacing: 0.3rem;
@@ -124,13 +124,13 @@ header {
     margin-block-start: 0;
   }
 
-  > ul {
-    > li {
+  ul {
+    li {
       padding: 0.3rem 0;
       letter-spacing: 0.2rem;
       color: $link-color;
 
-      > a {
+      a {
         position: relative;
         display: inline-block;
         text-decoration: none;
@@ -197,7 +197,7 @@ header {
       grid-row: auto;
     }
 
-    > img {
+    img {
       @include imgFit;
       -o-object-position: 100% 0%;
       object-position: 100% 0%;
@@ -219,7 +219,7 @@ header {
       grid-row: auto;
     }
 
-    > img {
+    img {
       @include imgFit;
     }
 
@@ -240,7 +240,7 @@ header {
       grid-row: auto;
     }
 
-    > img {
+    img {
       @include imgFit;
     }
 
@@ -261,7 +261,7 @@ header {
       grid-row: auto;
     }
 
-    > img {
+    img {
       @include imgFit;
     }
 
@@ -281,7 +281,7 @@ header {
       grid-row: auto;
     }
 
-    > img {
+    img {
       @include imgFit;
     }
 
@@ -301,7 +301,7 @@ header {
       grid-row: auto;
     }
 
-    > img {
+    img {
       @include imgFit;
       -o-object-position: 100% 100%;
       object-position: 100% 100%;
@@ -323,7 +323,7 @@ header {
       grid-row: auto;
     }
 
-    > img {
+    img {
       @include imgFit;
     }
 
@@ -343,7 +343,7 @@ header {
       grid-row: auto;
     }
 
-    > img {
+    img {
       @include imgFit;
     }
 
