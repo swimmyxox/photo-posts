@@ -101,9 +101,6 @@ p {
 }
 
 .container {
-  position: relative;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
 }
@@ -116,7 +113,7 @@ header {
   max-width: 180px;
   height: 120px;
   font-style: italic;
-  mix-blend-mode: color-dodge;
+  mix-blend-mode: difference;
   z-index: 100;
 
   h1 {
@@ -163,7 +160,6 @@ header {
 }
 
 .contents {
-  position: absolute;
   width: 80%;
   max-width: 1360px;
   height: auto;
