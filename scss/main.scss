@@ -114,7 +114,6 @@ header {
   height: 120px;
   font-style: italic;
   mix-blend-mode: color-dodge;
-  background-blend-mode: normal;
   z-index: 100;
 
   h1 {
@@ -170,6 +169,7 @@ header {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(23, 35px);
   gap: 8px;
+  background-color: rgba(0, 0, 0, 0);
 
   @include tablet {
     padding: 190px 0 50px;
