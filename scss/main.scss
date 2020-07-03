@@ -114,10 +114,10 @@ header {
   height: 120px;
   font-style: italic;
   mix-blend-mode: color-dodge;
+  color: $title-color;
   z-index: 100;
 
   h1 {
-    color: $title-color;
     font-weight: 300;
     letter-spacing: 0.3rem;
     -webkit-margin-before: 0;
