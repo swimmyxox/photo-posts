@@ -162,14 +162,16 @@ header {
   gap: 8px;
 
   @include tablet {
-    padding: 190px 0 50px;
+    margin-top: 190px;
+    padding-bottom: 50px;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(20, 80px);
   }
 
   @include phone {
     max-width: 72%;
-    padding: 190px 50px 50px;
+    margin-top: 190px;
+    padding: 0 50px 50px;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
   }
