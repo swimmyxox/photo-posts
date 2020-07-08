@@ -94,6 +94,7 @@ body {
 .container {
   width: 100vw;
   height: 100vh;
+  isolation: isolate;
 }
 
 header {
@@ -120,6 +121,7 @@ header {
       padding: 0.3rem 0;
       letter-spacing: 0.2rem;
       color: $link-color;
+      mix-blend-mode: difference;
 
       a {
         position: relative;

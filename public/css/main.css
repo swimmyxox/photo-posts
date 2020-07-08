@@ -43,7 +43,8 @@ body {
 
 .container {
   width: 100vw;
-  height: 100vh; }
+  height: 100vh;
+  isolation: isolate; }
 
 header {
   position: fixed;
@@ -64,7 +65,8 @@ header {
   header ul li {
     padding: 0.3rem 0;
     letter-spacing: 0.2rem;
-    color: #a0a5a9; }
+    color: #a0a5a9;
+    mix-blend-mode: difference; }
     header ul li a {
       position: relative;
       display: inline-block;
