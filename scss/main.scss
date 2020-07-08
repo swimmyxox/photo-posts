@@ -39,6 +39,28 @@ $button-color: #6c6f72;
   }
 }
 
+// ---------- reset css ----------
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  outline: 0;
+  background: none;
+}
+
+dl,
+dt,
+dd,
+ol,
+ul,
+li {
+  vertical-align: baseline;
+  list-style: none;
+}
+
 // ---------- main style ----------
 html,
 body {
@@ -54,37 +76,6 @@ body {
   font-weight: 300;
   overflow-y: scroll;
   overflow-x: hidden;
-}
-
-div {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-}
-
-dl,
-dt,
-dd,
-ol,
-ul,
-li {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  vertical-align: baseline;
-  background: transparent;
-  list-style: none;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  vertical-align: baseline;
-  background: transparent;
 }
 
 .wrapper {
